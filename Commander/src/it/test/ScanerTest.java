@@ -6,7 +6,7 @@ import javax.swing.filechooser.FileSystemView;
 
 public class ScanerTest {
 	
-	public static void main(String[] arg){
+	public  void main(String[] arg){
 		File[] paths;
 		FileSystemView fsv = FileSystemView.getFileSystemView();
 		// returns pathnames for files and directory
