@@ -1,5 +1,7 @@
 package it.source.model;
 
+import java.io.File;
+
 import javafx.beans.property.SimpleStringProperty;
 
 public class FileSource {
@@ -8,12 +10,15 @@ public class FileSource {
 	private SimpleStringProperty type;
 	private SimpleStringProperty size;
 	private SimpleStringProperty date;
+	private File sourceFile;
 
-	public FileSource(String name, String type, String size, String date) {
+	public FileSource(String name, String type, String size, String date,
+			File sourceFile) {
 		this.name = new SimpleStringProperty(name);
 		this.type = new SimpleStringProperty(type);
 		this.size = new SimpleStringProperty(size);
 		this.date = new SimpleStringProperty(date);
+		this.sourceFile = sourceFile;
 	}
 
 	public String getName() {
@@ -46,6 +51,14 @@ public class FileSource {
 
 	public void setDate(String date) {
 		this.date.set(date);
+	}
+
+	public File getSourceFile() {
+		return sourceFile;
+	}
+
+	public void setSourceFile(File sourceFile) {
+		this.sourceFile = sourceFile;
 	}
 
 }
